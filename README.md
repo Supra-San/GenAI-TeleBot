@@ -15,7 +15,7 @@ git clone https://github.com/Supra-san/GenAI-Telebot.git
 
 2. Navigate to the project directory:
 ```bash
-git clone https://github.com/Supra-san/GenAI-Telebot.git
+cd GenAI-TeleBot
 ```
 
 3. Install the required dependencies:
@@ -24,12 +24,11 @@ pip install -r requirements.txt
 ```
 
 ## Configuration
-- Store your API keys in a separate file within the config folder.
-- Ensure your config/api_keys.py file contains the following:
+- Make sure your api_keys are filled in correctly
 
 ```bash
-TELEGRAM_API_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
 OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
+TELEGRAM_API_TOKEN = "YOUR_TELEGRAM_API_KEY"
 ```
 
 ## Usage
