@@ -1,11 +1,17 @@
 # Generative AI TeleBot
 
-This repository contains a Telegram bot that integrates OpenAI's image generation and text generation capabilities. Users can generate images based on textual prompts and create paragraphs of text by inputting simple commands. The bot is designed to be user-friendly and showcases the potential of generative AI in interactive applications.
+This Telegram bot integrates OpenAI's API to generate AI-powered images and text based on user prompts. The bot allows users to:<br/>
+✅ Generate images using DALL·E 3 by providing a text prompt.<br/>
+✅ Generate text responses using GPT-3.5-Turbo.<br/>
+✅ Interact with AI through a simple Telegram interface.
 
 ## Features
-- Generate images using OpenAI's DALL-E model from user prompts.
-- Create paragraphs of text based on user input.
-- Easy to use with simple commands.
+✅ Image Generation: Users can request AI-generated images based on text prompts.<br/>
+✅ Text Generation: Users can generate AI-based responses for creative or informational purposes.<br/>
+✅ User-Friendly Commands: Simple /generate-image and /generate-text commands for easy interaction.<br/>
+✅ Error Handling & Logging: Built-in error handling and logging for better stability.<br/>
+✅ Secure API Key Management: API keys are stored in a separate config module.
+
 
 ## Installation
 1. Clone the repository:
@@ -23,23 +29,37 @@ cd GenAI-TeleBot
 pip install -r requirements.txt
 ```
 
-## Configuration
-- Make sure your api_keys are filled in correctly
-
+4. Set Up API Keys
+Edit config/config.py and replace placeholders with actual API keys.
 ```bash
-OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
-TELEGRAM_API_TOKEN = "YOUR_TELEGRAM_API_KEY"
+OPENAI_API_KEY = "your_openai_api_key"
+TELEGRAM_API_KEY = "your_telegram_api_key"
 ```
 
-## Usage
-
+5. Run the Bot
 ```bash
 python app.py
 ```
+## Error Handling
+Invalid Commands:
+```bash
+❌ Invalid command. Use /generate-image or /generate-text.
+```
 
-- Use the following commands in Telegram:
-  + /generate-image <prompt> to generate an image.
-  + /generate-text <prompt> to create a paragraph of text.
+API Errors:
+```bash
+❌ Error generating image.
+```
+
+Network Issues:
+```bash
+⚠️ Failed to retrieve the image.
+```
+
+## Future Improvements
+
+Support for different image sizes and styles.<br/>
+Improved UI with inline buttons for better user interaction.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
